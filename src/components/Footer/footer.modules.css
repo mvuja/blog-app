@@ -1,0 +1,14 @@
+.newsletter{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+}
+
+.newsletter a{
+    display: block;
+}
+
+.newsletter input{
+    width: 100%;
+}
