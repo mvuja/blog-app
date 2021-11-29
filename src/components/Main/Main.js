@@ -1,10 +1,16 @@
 import React from "react";
 import './main.modules.css'
+import CardComponent from '../Card/Card'
+import Container from '@mui/material/Container';
 
 const Main = () => {
 
     return (
-        <div className="main">Hello Main</div>
+        <main id="main" className="main">
+            <Container>
+            <CardComponent />
+            </Container>
+        </main>
     )
 }
 

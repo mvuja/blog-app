@@ -1,23 +1,35 @@
 import React from "react";
+import { Route, Switch } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Hero from './components/Hero/Hero';
-import ButtonComponent from './components/Button/Button';
 import Main from './components/Main/Main';
-import Card from './components/Card/Card';
 import Footer from './components/Footer/Footer';
+import AboutPage from './components/AboutPage/AboutPage';
+import ContactPage from './components/ContactPage/ContactPage';
 
 const App = () => {
 
 
     return (
-        <div>
+            <>
             <Navbar />
-            <Hero />
-            <ButtonComponent />
-            <Main />
-            <Card />
+            <Switch>
+                <Route exact path="/">
+                  <Hero />
+                  <Main />
+                </Route>
+                <Route path="/about">
+                    <AboutPage />
+                </Route>
+                <Route path="/contact">
+                  <ContactPage />
+                </Route>
+                <Route path="*">
+                    {/* <NotMatch /> */}
+                </Route>
+            </Switch>
             <Footer />
-        </div>
+        </>
         
     )
 }
