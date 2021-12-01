@@ -15,7 +15,7 @@ const Item = styled(Paper)(({ theme }) => ({
 
 export default function Footer() {
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1 }} className="footer">
       <Grid container spacing={8}>
         <Grid item xs={6}>
           <Item style={{backgroundColor: '#F4F4F4'}}>
@@ -31,12 +31,24 @@ export default function Footer() {
         </Grid>
         <Grid item xs={3}>
           <Item style={{backgroundColor: '#F4F4F4'}}>
-              
+            <h5 style={{color: '#33A4D8', fontSize: '24px', fontWeight: '400', margin: '20px'}}>Quick Links</h5>
+            <ul style={{listStyle: 'none'}}>
+              <li><a href="#">Duis bibendum</a></li>
+              <li><a href="#">Duis bibendum</a></li>
+              <li><a href="#">Duis bibendum</a></li>
+              <li><a href="#">Duis bibendum</a></li>
+            </ul>
           </Item>
         </Grid>
         <Grid item xs={3}>
           <Item style={{backgroundColor: '#F4F4F4'}}>
-              
+            <h5 style={{color: '#33A4D8', fontSize: '24px', fontWeight: '400', margin: '20px'}}>Our Pages</h5>
+            <ul style={{listStyle: 'none'}}>
+              <li><a href="#">Duis bibendum</a></li>
+              <li><a href="#">Duis bibendum</a></li>
+              <li><a href="#">Duis bibendum</a></li>
+              <li><a href="#">Duis bibendum</a></li>
+            </ul>
           </Item>
         </Grid>
       </Grid>
