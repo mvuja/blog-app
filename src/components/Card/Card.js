@@ -5,9 +5,10 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
-import meerkat from '../../assets/meerkat.jpg'
 
-const CardComponent = () => {
+// API KEY: 137049f91b254a0d8f4a3c95353c3935
+
+const CardComponent = (props) => {
 
     return (
         <Card sx={{ maxWidth: 345 }}>
@@ -15,16 +16,15 @@ const CardComponent = () => {
           <CardMedia
             component="img"
             height="200"
-            image={meerkat}
+            image={props.img}
             alt="meerkat"
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              Lizard
+             {props.title}
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              Lizards are a widespread group of squamate reptiles, with over 6,000
-              species, ranging across all continents except Antarctica
+            {props.txt}
             </Typography>
           </CardContent>
         </CardActionArea>

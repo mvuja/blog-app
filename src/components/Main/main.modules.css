@@ -1,3 +1,8 @@
 #main{
-    background: rgb(69, 83, 83);
+    padding: 50px 0;
+}
+
+.grid-cont{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }

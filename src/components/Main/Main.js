@@ -2,13 +2,41 @@ import React from "react";
 import './main.modules.css'
 import CardComponent from '../Card/Card'
 import Container from '@mui/material/Container';
+import meerkat from '../../assets/meerkat.jpg'
 
 const Main = () => {
+
+    const cards = [
+        {
+            id: 1,
+            title: 'djesi',
+            img: `${meerkat}`,
+            txt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec luctus quam. Sed eget malesuada sem. Maecenas id quam ac sapien cursus tempor. Phasellus nulla ligula, rutrum id mi at, posuere rhoncus mauris.'
+        },
+        {
+            id: 2,
+            title: 'djesi',
+            img: `${meerkat}`,
+            txt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec luctus quam. Sed eget malesuada sem. Maecenas id quam ac sapien cursus tempor. Phasellus nulla ligula, rutrum id mi at, posuere rhoncus mauris.'
+        },
+        {
+            id: 3,
+            title: 'djesi',
+            img: `${meerkat}`,
+            txt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec luctus quam. Sed eget malesuada sem. Maecenas id quam ac sapien cursus tempor. Phasellus nulla ligula, rutrum id mi at, posuere rhoncus mauris.'
+        },
+    ]
 
     return (
         <main id="main" className="main">
             <Container>
-            <CardComponent />
+                <div className="grid-cont">
+                {
+                    cards.map(el => (
+                        <CardComponent key={el.id} img={el.img} txt={el.txt} title={el.title} />
+                    ))
+                }
+                </div>
             </Container>
         </main>
     )
